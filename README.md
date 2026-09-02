@@ -44,26 +44,26 @@ Public feeds in. One Mac. Dashboards and blueprints out. GitHub is the public sh
 flowchart TB
   subgraph IN["1 · Public data"]
     direction LR
-    MEAS["Measured<br/>gauges · satellites · air stations"]
-    DECL["Declared<br/>open documents · city plans"]
+    MEAS["Measured<br/>gauges · satellites · air"]
+    DECL["Declared<br/>open docs · city plans"]
   end
 
-  subgraph MAC["2 · Compute on one Mac"]
-    JOIN["Join → score → map<br/>measured stays a reading · modelled uses a published formula"]
+  subgraph MAC["2 · One Mac"]
+    JOIN["Join → score → map"]
   end
 
   subgraph OUT["3 · Civic outputs"]
     direction LR
-    DASH["Dashboards"]
-    BLUE["Blueprints"]
+    DASH["Dashboards<br/>measured layers"]
+    BLUE["Blueprints<br/>modelled scores"]
   end
 
   GH["4 · Open GitHub"]
 
   MEAS --> JOIN
   DECL --> JOIN
-  JOIN -->|"measured layers shown as readings"| DASH
-  JOIN -->|"modelled scores, formula disclosed"| BLUE
+  JOIN --> DASH
+  JOIN --> BLUE
   DASH --> GH
   BLUE --> GH
 ```
@@ -78,29 +78,29 @@ One studio, five clusters. Names below are public GitHub repositories.
 
 ```mermaid
 flowchart TB
-  STUDIO["Nonarkara · Bangkok civic studio"]
+  STUDIO["Bangkok civic studio"]
 
   subgraph Safety["Safety"]
-    FD["FloodDash-Blueprint"]
-    AD["airdash"]
-    SAT["DrNon-Global-Satellite-Toolkit"]
+    FD["FloodDash"]
+    AD["AirDash"]
+    SAT["Satellite Toolkit"]
   end
 
   subgraph Cities["Cities"]
-    SLIC["SLIC-Index"]
-    SCTI["smart-city-thailand-index"]
+    SLIC["SLIC"]
+    SCTI["SCTI"]
     CH["city-hub"]
     BKK["BKKx"]
   end
 
   subgraph Watch["Watch"]
     GM["globalmonitor"]
-    GEO["geopolitics-dashboard"]
+    GEO["geopolitics"]
   end
 
   subgraph Craft["Craft"]
     AX["Axiom"]
-    RAMS["Rams-NYCTA-Design-Core"]
+    RAMS["Rams-NYCTA"]
     SK["Non-Claude-Skills"]
   end
 
@@ -115,6 +115,14 @@ flowchart TB
   STUDIO --> Craft
   STUDIO --> Story
 ```
+
+Short names on the map; links below.
+
+- **Safety** — [FloodDash-Blueprint](https://github.com/Nonarkara/FloodDash-Blueprint) · [airdash](https://github.com/Nonarkara/airdash) · [DrNon-Global-Satellite-Toolkit](https://github.com/Nonarkara/DrNon-Global-Satellite-Toolkit)
+- **Cities** — [SLIC-Index](https://github.com/Nonarkara/SLIC-Index) · [smart-city-thailand-index](https://github.com/Nonarkara/smart-city-thailand-index) · [city-hub](https://github.com/Nonarkara/city-hub) · [BKKx](https://github.com/Nonarkara/BKKx)
+- **Watch** — [globalmonitor](https://github.com/Nonarkara/globalmonitor) · [geopolitics-dashboard](https://github.com/Nonarkara/geopolitics-dashboard)
+- **Craft** — [Axiom](https://github.com/Nonarkara/Axiom) · [Rams-NYCTA-Design-Core](https://github.com/Nonarkara/Rams-NYCTA-Design-Core) · [Non-Claude-Skills](https://github.com/Nonarkara/Non-Claude-Skills)
+- **Story** — [zero-to-one](https://github.com/Nonarkara/zero-to-one) · [ninja-innovation](https://github.com/Nonarkara/ninja-innovation)
 
 Safety watches water, air, and orbit. Cities score and atlas places. Watch reads a wider political and economic picture. Craft is how surfaces get built. Story is how the method is taught.
 
