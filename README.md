@@ -161,6 +161,7 @@ How to open an issue or fork a blueprint without crossing those lines: [CONTRIBU
 
 - **Studio door:** [nonarkara.org](https://nonarkara.org)
 - **Company:** Axiom X Co., Ltd. — [axiom.nonarkara.org](https://axiom.nonarkara.org)
+- **License:** [MIT](LICENSE) — Non Arkaraprasertkul / Axiom X Co., Ltd.
 
 Bangkok · GMT+7
 
