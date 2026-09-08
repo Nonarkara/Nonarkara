@@ -11,6 +11,23 @@ One-Mac forkable towers, traceable scores, Thai–English.
 
 ---
 
+## Estate inventory (importable)
+
+Machine-readable GitHub health + repo metadata for tools and agents.
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Nonarkara/Nonarkara/main/estate/public-inventory.v1.json \
+  -o estate.json
+jq '.counts, .health_summary.public_missing_or_unknown_license' estate.json
+```
+
+- Schema + field dictionary: [`estate/SCHEMA.md`](estate/SCHEMA.md)
+- Public inventory: [`estate/public-inventory.v1.json`](estate/public-inventory.v1.json)
+- Refresh: `estate/refresh.sh` (authenticated `gh` as Nonarkara)
+
+Public active repos only. No private names or secrets in the published file.
+
+
 ## เริ่มที่นี่ตามระดับ · Start here by level
 
 Three doors. Pick the one that matches how you arrived.
